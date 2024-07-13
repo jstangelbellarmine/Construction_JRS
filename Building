@@ -1,0 +1,111 @@
+//QUESTION 6 - which to include? 
+
+
+/* Attributes 
+ * #projectName: String
+ * #completeAddress: String
+ * #totalSquareFeet: double
+ * #occupancyGroup: String
+ * #subgroup: String
+ * 
+ * Methods/Operations:
+ * +Building()
+ * +Building (String projectName, String completeAddress, doulbe totalSquareFeet, String occupancyGroup, String subgroup)
+ * +draw(): void
+ * +displayData(): String
+ */	
+
+public class Building {
+
+	protected String projectName;
+	protected String completeAddress;
+	protected double totalSquiareFeet;
+	protected String occupancyGroup;
+	protected String subgroup;
+	public String displayData;
+	
+	
+	//constructor
+	
+	public Building()
+	{
+		
+	}//empty constructor
+	
+	public Building(String projectName, String completeAddress, double totalSquareFeet, String occupancyGroup, String subgroup)
+	{
+		
+	}//preferred constructor 
+	//start getter/setter
+	public String getProjectName() {
+		return projectName;
+	}//end getter
+
+	public void setProjectName(String projectName) {
+		this.projectName = projectName;
+	}//end setter
+
+	public String getCompleteAddress() {
+		return completeAddress;
+	}//end getter
+
+	public void setCompleteAddress(String completeAddress) {
+		this.completeAddress = completeAddress;
+	}//end setter
+
+	public double getTotalSquiareFeet() {
+		return totalSquiareFeet;
+	}//end getter
+
+	public void setTotalSquiareFeet(double totalSquiareFeet) {
+		this.totalSquiareFeet = totalSquiareFeet;
+	}//end setter
+
+	public String getOccupancyGroup() {
+		return occupancyGroup;
+	}//end getter
+
+	public void setOccupancyGroup(String occupancyGroup) {
+		this.occupancyGroup = occupancyGroup;
+	}//end setter
+
+	public String getSubgroup() {
+		return subgroup;
+	}//end getter
+
+	public void setSubgroup(String subgroup) {
+		this.subgroup = subgroup;
+	}//end setter
+
+	public String getDisplayData() {
+		return displayData;
+	}//end getter
+
+	public void setDisplayData(String displayData) {
+		this.displayData = displayData;
+	}//end setter
+
+
+	
+	public void draw()
+	{
+		
+	}//not sure what this does? 
+	
+	public String displayData()
+	{
+		return this.displayData;
+		
+	}//displayData string
+
+	//Question 6 need to work on this
+	@Override
+	public String toString() {
+		return "Building [projectName=" + projectName + ", completeAddress=" + completeAddress + ", totalSquiareFeet="
+				+ totalSquiareFeet + ", occupancyGroup=" + occupancyGroup + ", subgroup=" + subgroup + ", displayData="
+				+ displayData + ", displayData()=" + displayData() + ", getClass()=" + getClass() + ", hashCode()="
+				+ hashCode() + ", toString()=" + super.toString() + "]";
+	}
+	 
+	
+}
