@@ -1,0 +1,43 @@
+/*
+ * Attributes:
+ * -garage: boolean
+ * 
+ * methods:
+ * +SingleFamilyHome()
+ * +SingleFamilyHome(String projectName, String completeAddress, double totalSquareFeet, String occupancyGroup, string Subgroup)
+ * +draw(): void
+ * +displayData(): String
+ */
+
+public class SingleFamilyHome extends Residential {
+
+	private boolean garage;
+	
+	public SingleFamilyHome()
+	{
+		
+	}//empty constructor
+	public SingleFamilyHome(String projectName, String completeAddress, double totalSquareFeet, String occupancyGroup, String Subgroup)
+	{
+		
+	}//preferred
+	public boolean isGarage() {
+		return garage;
+	}
+	public void setGarage(boolean garage) {
+		this.garage = garage;
+	}//end getters/setters
+	
+	public void draw()
+	{
+		
+	}//not sure what this does? 
+	
+	public String displayData()
+	{
+		return this.displayData;
+	}
+	
+	
+
+}//end class
