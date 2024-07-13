@@ -1,0 +1,52 @@
+/*
+ * attributes:
+ * #numRentableUnits: int
+ *  
+ * methods:
+ * +Business()
+ * +Business (String projectName, String completeAddress, double totalSquareFeet, String occupancyGroup, String subgroup)
+ */
+	
+
+
+public class Business extends Building {
+
+	/* should I have these in here? 
+		public String projectName;
+		public String completeAddress;
+		public double totalSquiareFeet;
+		public String occupancyGroup;
+		public String subgroup;
+	*/	
+	
+	
+		public int numRentableUnits;
+
+		
+		public Business() {
+			
+		}//empty-argument constructor
+		
+		public Business(String projectName, String completeAddress, double totalSquareFeet, String occupancyGroup, String subgroup)
+		{
+			
+		}//preferred constructor
+
+		public int getNumRentableUnits() {
+			return numRentableUnits;
+		}//end getter
+
+		public void setNumRentableUnits(int numRentableUnits) {
+			this.numRentableUnits = numRentableUnits;
+		}//end setter
+		
+		//anything else? 
+		
+
+
+
+
+
+
+
+}//end class
