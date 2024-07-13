@@ -1,0 +1,39 @@
+/*
+ * Attributes
+ * -numRentalUnits: int
+ * -avgUnitSize: double
+ * -parkingAvailable: boolean
+ *
+ * Methods
+ * +Apartment()
+ * Apartment(String projectName, String completeAddress, double totalSquareFeet, String occupancyGroup, string subgroup)
+ * +draw(): void
+ * +displayData(): String
+ * 
+ */
+public class Apartment extends Residential {
+
+	private int numRentableUnits;
+	private double avgUnitSize;
+	private boolean parkingAvailable;
+	public String displayData;
+	
+	public Apartment()
+	{
+		
+	}//empty constructor 
+	public Apartment(String projectName, String completeAddress, double totalSquareFeet, String occupancyGroup, String subgroup)
+	{
+		
+	}
+	public void draw()
+	{
+		
+	}//not sure what this does? 
+	
+
+	public String displayData()
+	{
+		return this.displayData;
+	}
+}//end class
