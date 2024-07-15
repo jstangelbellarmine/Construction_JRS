@@ -1,5 +1,3 @@
-//QUESTION 6 - which to include? 
-
 
 /* Attributes 
  * #projectName: String
@@ -19,7 +17,7 @@ public class Building {
 
 	protected String projectName;
 	protected String completeAddress;
-	protected double totalSquiareFeet;
+	protected double totalSquareFeet;
 	protected String occupancyGroup;
 	protected String subgroup;
 	public String displayData;
@@ -36,6 +34,9 @@ public class Building {
 	{
 		
 	}//preferred constructor 
+	
+
+		
 	//start getter/setter
 	public String getProjectName() {
 		return projectName;
@@ -53,12 +54,12 @@ public class Building {
 		this.completeAddress = completeAddress;
 	}//end setter
 
-	public double getTotalSquiareFeet() {
-		return totalSquiareFeet;
+	public double getTotalSquareFeet() {
+		return totalSquareFeet;
 	}//end getter
 
-	public void setTotalSquiareFeet(double totalSquiareFeet) {
-		this.totalSquiareFeet = totalSquiareFeet;
+	public void setTotalSquareFeet(double totalSquiareFeet) {
+		this.totalSquareFeet = totalSquareFeet;
 	}//end setter
 
 	public String getOccupancyGroup() {
@@ -94,18 +95,23 @@ public class Building {
 	
 	public String displayData()
 	{
-		return this.displayData;
+		StringBuilder sb = new StringBuilder("Begin Data Report for Building Class\n\n");
+		
+		sb.append("Project Name: "+getProjectName()+"\n\n");
+		sb.append("Address: "+getCompleteAddress()+"\n\n");
+		sb.append("Square Feet: "+getTotalSquareFeet()+"\n\n");
+		sb.append("Occupancy Group: "+getOccupancyGroup()+"\n\n");
+		sb.append("Occupancy Subgroup: "+getSubgroup()+"\n\n");
+		sb.append("End Data Report for Building Class. \n\n");
+		return sb.toString();
 		
 	}//displayData string
 
-	//Question 6 need to work on this
 	@Override
 	public String toString() {
-		return "Building [projectName=" + projectName + ", completeAddress=" + completeAddress + ", totalSquiareFeet="
-				+ totalSquiareFeet + ", occupancyGroup=" + occupancyGroup + ", subgroup=" + subgroup + ", displayData="
-				+ displayData + ", displayData()=" + displayData() + ", getClass()=" + getClass() + ", hashCode()="
-				+ hashCode() + ", toString()=" + super.toString() + "]";
+		return "Building [projectName=" + projectName + ", completeAddress=" + completeAddress + ", totalSquareFeet="
+				+ totalSquareFeet + ", occupancyGroup=" + occupancyGroup + ", subgroup=" + subgroup + ", displayData="
+				+ displayData + "]";
+	}//end Building toString
+
 	}
-	 
-	
-}
