@@ -10,15 +10,6 @@
 
 
 public class Business extends Building {
-
-	/* should I have these in here? 
-		public String projectName;
-		public String completeAddress;
-		public double totalSquiareFeet;
-		public String occupancyGroup;
-		public String subgroup;
-	*/	
-	
 	
 		public int numRentableUnits;
 
@@ -39,14 +30,14 @@ public class Business extends Building {
 		public void setNumRentableUnits(int numRentableUnits) {
 			this.numRentableUnits = numRentableUnits;
 		}//end setter
-		
-		//anything else? 
-		
 
-
-
-
-
-
+		@Override
+		public String toString() {
+			return "Business [numRentableUnits=" + numRentableUnits + ", projectName=" + projectName
+					+ ", completeAddress=" + completeAddress + ", totalSquareFeet=" + totalSquareFeet
+					+ ", occupancyGroup=" + occupancyGroup + ", subgroup=" + subgroup + ", displayData=" + displayData
+					+ "]";
+		}
+	
 
 }//end class
