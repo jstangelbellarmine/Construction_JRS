@@ -15,29 +15,44 @@ public class SingleFamilyHome extends Residential {
 	
 	public SingleFamilyHome()
 	{
-		
+
 	}//empty constructor
 	public SingleFamilyHome(String projectName, String completeAddress, double totalSquareFeet, String occupancyGroup, String Subgroup)
 	{
 		
 	}//preferred
+	
 	public boolean isGarage() {
 		return garage;
 	}
 	public void setGarage(boolean garage) {
 		this.garage = garage;
-	}//end getters/setters
+	}
+	//end getters/setters
 	
 	public void draw()
 	{
 		
-	}//not sure what this does? 
+	} 
 	
 	public String displayData()
 	{
-		return this.displayData;
+		StringBuilder sb = new StringBuilder("Begin Data Report for Single Family Home Class\n\n");
+		
+		sb.append("Project Name: "+getProjectName()+"\n\n");
+		sb.append("Address: "+getCompleteAddress()+"\n\n");
+		sb.append("Square Feet: "+getTotalSquareFeet()+"\n\n");
+		sb.append("Occupancy Group: "+getOccupancyGroup()+"\n\n");
+		sb.append("Occupancy Subgroup: "+getSubgroup()+"\n\n");
+		sb.append("Garage: "+isGarage()+"\n\n");
+		sb.append("End Data Report for Single Famile Home Class. \n\n");
+		return sb.toString();
+	}//end displayData
+	
+	@Override
+	public String toString() {
+		return "SingleFamilyHome [garage=" + garage + ", isGarage()=" + isGarage() + ", displayData()=" + displayData()
+				+ "]";
 	}
 	
-	
-
 }//end class
