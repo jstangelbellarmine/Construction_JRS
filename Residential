@@ -51,6 +51,12 @@ public class Residential extends Building {
 		this.laundryRoom = laundryRoom;
 	}//end setter
 	
-	// end getters/setters
+	@Override
+	public String toString() {
+		return "Residential [numBedrooms=" + numBedrooms + ", numBathrooms=" + numBathrooms + ", laundryRoom="
+				+ laundryRoom + ", getNumBedrooms()=" + getNumBedrooms() + ", getNumBathrooms()=" + getNumBathrooms()
+				+ ", isLaundryRoom()=" + isLaundryRoom() + "]";
+	}
+
 	
 }
