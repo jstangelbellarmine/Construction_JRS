@@ -16,7 +16,7 @@ public class Apartment extends Residential {
 	private int numRentableUnits;
 	private double avgUnitSize;
 	private boolean parkingAvailable;
-	public String displayData;
+	
 	
 	public Apartment()
 	{
@@ -26,14 +26,53 @@ public class Apartment extends Residential {
 	{
 		
 	}
+	
+	public int getNumRentableUnits() {
+		return numRentableUnits;
+	}
+	public void setNumRentableUnits(int numRentableUnits) {
+		this.numRentableUnits = numRentableUnits;
+	}
+	public double getAvgUnitSize() {
+		return avgUnitSize;
+	}
+	public void setAvgUnitSize(double avgUnitSize) {
+		this.avgUnitSize = avgUnitSize;
+	}
+	public boolean isParkingAvailable() {
+		return parkingAvailable;
+	}
+	public void setParkingAvailable(boolean parkingAvailable) {
+		this.parkingAvailable = parkingAvailable;
+	}
 	public void draw()
 	{
 		
 	}//not sure what this does? 
 	
 
+
 	public String displayData()
 	{
-		return this.displayData;
+		StringBuilder sb = new StringBuilder("Begin Data Report for Apartment Class\n\n");
+		
+		sb.append("Project Name: "+getProjectName()+"\n\n");
+		sb.append("Address: "+getCompleteAddress()+"\n\n");
+		sb.append("Square Feet: "+getTotalSquareFeet()+"\n\n");
+		sb.append("Occupancy Group: "+getOccupancyGroup()+"\n\n");
+		sb.append("Occupancy Subgroup: "+getSubgroup()+"\n\n");
+		sb.append("Number of Rental Units: "+getNumRentableUnits()+"\n\n");
+		sb.append("Average Unit Size: "+getAvgUnitSize()+"\n\n");
+		sb.append("Parking Included: "+parkingAvailable+"\n\n");
+		sb.append("End Data Report for Apartment Class. \n\n");
+		return sb.toString();
 	}
+	@Override
+	public String toString() {
+		return "Apartment [numRentableUnits=" + numRentableUnits + ", avgUnitSize=" + avgUnitSize
+				+ ", parkingAvailable=" + parkingAvailable + ", displayData=" + displayData + ", displayData()="
+				+ displayData() + "]";
+	}
+	
+	
 }//end class
