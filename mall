@@ -24,7 +24,6 @@ public class Mall extends Business {
 		
 	}//empty argument-constructor 
 	
-	
 	public Mall(String projectName, String completeAddress, double totalSquareFeet, String occupancyGroup, String subgroup)
 	{
 		
@@ -32,27 +31,25 @@ public class Mall extends Business {
 	
 	//getters/setters
 	
-	
-	
 	public void setNumRentalUnits(int numRentalUnits) {
 		this.numRentalUnits = numRentalUnits;
 	}
 
-
+	public int getNumRentalUnits() {
+		return numRentalUnits;
+	}
+	
 	public double getMedianUnitSize() {
 		return medianUnitSize;
 	}
-
 
 	public void setMedianUnitSize(double medianUnitSize) {
 		this.medianUnitSize = medianUnitSize;
 	}
 
-
 	public int getNumParkingSpaces() {
 		return numParkingSpaces;
 	}
-
 
 	public void setNumParkingSpaces(int numParkingSpaces) {
 		this.numParkingSpaces = numParkingSpaces;
@@ -60,12 +57,30 @@ public class Mall extends Business {
 	public void draw()
 	{
 		
-	}//not sure what this does? 
+	}
 	
 
 	public String displayData()
 	{
-		return this.displayData;
+		StringBuilder sb = new StringBuilder("Begin Data Report for Mall Class\n\n");
+		
+		sb.append("Project Name: "+getProjectName()+"\n\n");
+		sb.append("Address: "+getCompleteAddress()+"\n\n");
+		sb.append("Square Feet: "+getTotalSquareFeet()+"\n\n");
+		sb.append("Occupancy Group: "+getOccupancyGroup()+"\n\n");
+		sb.append("Occupancy Subgroup: "+getSubgroup()+"\n\n");
+		sb.append("Number of Rental Units: "+getNumRentalUnits()+"\n\n");
+		sb.append("Average Unit Size: "+getMedianUnitSize()+"\n\n");
+		sb.append("Number of Parking Spaces: "+getNumParkingSpaces()+"\n\n");
+		sb.append("End Data Report for Mall Class. \n\n");
+		return sb.toString();
+	}
+	
+	@Override
+	public String toString() {
+		return "Mall [numRentalUnits=" + numRentalUnits + ", medianUnitSize=" + medianUnitSize + ", numParkingSpaces="
+				+ numParkingSpaces + ", getMedianUnitSize()=" + getMedianUnitSize() + ", getNumParkingSpaces()="
+				+ getNumParkingSpaces() + ", displayData()=" + displayData() + "]";
 	}
 
 }//end class
