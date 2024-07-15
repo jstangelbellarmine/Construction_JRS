@@ -1,0 +1,28 @@
+
+public class Application {
+
+	public static void main(String[] args) {
+	
+	
+		
+	Building bld = new Building("Smith Residence","1593 West Lane |", 1750, "Residential", "B1");
+	System.out.println(bld.displayData());
+	//end Building test, not sure why my output still populated as empty-argument 
+	
+	Mall ml = new Mall();
+	System.out.println(ml.displayData());
+	//end Mall test
+	
+	Apartment apt = new Apartment();
+	System.out.println(apt.displayData());
+	//end Apartment test
+
+	SingleFamilyHome sfh = new SingleFamilyHome();
+	System.out.println(sfh.displayData());
+	//end SingleFamilyHome test
+	
+	
+	}//end main
+	
+	
+}//end class
